@@ -25,4 +25,16 @@ print shares, price, year
 #   File "<stdin>", line 1, in <module>
 # ValueError: need more than 4 values to unpack
 
+# 扩展
+# 实际上，Python解压赋值操作可以用在任何可迭代对象上，不仅仅是列表和元祖。如字符串，文件对象，迭代器和生成器
+s = 'hello'
+a, b, c, d, e = s
+print a, b, c
+# >>> 'h' 'e' 'l'
+
+# 有时候，若只想解压一部分，可以用占位符占位，到时候丢弃占位符就可以了
+data = ['acme', 50, 90.1, (2012, 12, 30)]
+_, shares, price, _ = data
+print shares, price
+# >>> 50 90.1
 
